@@ -17,27 +17,35 @@ buttonClick.addEventListener("click", function() {
 
     let i = 0;
     while (i < verifiedNames.length) {
+        
+        if (userName == "") {
+            window.alert("Enter a valid Name!")
+            break
+        } else {
+            console.log("while - " + verifiedNames[i]);
 
-    console.log("while - " + verifiedNames[i]);
+            if (verifiedNames[i] === userName){
+            found = true;
+            break
+            }        
 
-    if (verifiedNames[i] === userName){
-        found = true;
-        break
-    } 
-
-    i++
+        }
+        i++ 
+        
 }
-    if(found) {
+    if(found && userName != "") {
         alertResult.innerHTML= "You're in!";
         alertResult.classList.remove("alert-danger");
         alertResult.classList.add("alert-success");
-    } else {
+    } else if (userName != ""){
         alertResult.innerHTML = "You're out!";
         alertResult.classList.remove("alert-success");
         alertResult.classList.add("alert-danger");
     }
 
-    alertResult.classList.remove("d-none");
+    if (found != ""){
+        alertResult.classList.remove("d-none");
+    }
 
 })
 
