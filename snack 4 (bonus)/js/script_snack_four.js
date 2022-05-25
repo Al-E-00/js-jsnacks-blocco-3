@@ -8,21 +8,20 @@
 let verifiedNames = ["Alessio", "Marta", "Giorgia", "Alberto", "Francesco", "Ludovica", "Veronica", "Marco"];
 
 let userName = prompt("Write your name");
+let found = false;
 
 i = 0;
-while (i < 1) {
-
-    let found = false;
+while (i < verifiedNames.length) {
 
     if (verifiedNames[i] === userName){
         found = true;
     } 
 
-    if(found) {
-        alert("You're in!")
-    } else {
-        alert("You're out!")
-    }
-
     i++
+}
+
+if(found) {
+    alert("You're in!")
+} else {
+    alert("You're out!")
 }
