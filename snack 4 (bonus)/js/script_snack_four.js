@@ -18,7 +18,9 @@ while (i < verifiedNames.length) {
     } 
 
     i++
+    console.log("while - " + verifiedNames)
 }
+
 
 if(found) {
     alert("You're in!")
