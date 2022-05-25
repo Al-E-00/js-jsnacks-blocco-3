@@ -17,9 +17,9 @@ buttonClick.addEventListener("click", function() {
 
     let i = 0;
     while (i < verifiedNames.length) {
-        
+
         if (userName == "") {
-            window.alert("Enter a valid Name!")
+            window.alert("Enter a valid name!")
             break
         } else {
             console.log("while - " + verifiedNames[i]);
@@ -37,13 +37,13 @@ buttonClick.addEventListener("click", function() {
         alertResult.innerHTML= "You're in!";
         alertResult.classList.remove("alert-danger");
         alertResult.classList.add("alert-success");
-    } else if (userName != ""){
+    } else if (found != true && userName != ""){
         alertResult.innerHTML = "You're out!";
         alertResult.classList.remove("alert-success");
         alertResult.classList.add("alert-danger");
     }
 
-    if (found != ""){
+    if (userName != ""){
         alertResult.classList.remove("d-none");
     }
 
