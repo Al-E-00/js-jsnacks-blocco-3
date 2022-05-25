@@ -5,13 +5,18 @@
 - stop the loop once the name has been found
 */
 
-let verifiedNames = ["Alessio", "Marta", "Giorgia", "Alberto", "Francesco", "Ludovica", "Veronica", "Marco"];
+const verifiedNames = ["Alessio", "Marta", "Giorgia", "Alberto", "Francesco", "Ludovica", "Veronica", "Marco"];
+const buttonClick = document.getElementById("checkButton");
+const alertResult = document.getElementById("alertResult");
 
-let userName = prompt("Write your name");
-let found = false;
+buttonClick.addEventListener("click", function() {
+    const userName = document.getElementById("userName").value;
 
-i = 0;
-while (i < verifiedNames.length) {
+
+    let found = false;
+
+    let i = 0;
+    while (i < verifiedNames.length) {
 
     console.log("while - " + verifiedNames[i]);
 
@@ -22,10 +27,20 @@ while (i < verifiedNames.length) {
 
     i++
 }
+    if(found) {
+        alertResult.innerHTML= "You're in!";
+        alertResult.classList.remove("alert-danger");
+        alertResult.classList.add("alert-success");
+    } else {
+        alertResult.innerHTML = "You're out!";
+        alertResult.classList.remove("alert-success");
+        alertResult.classList.add("alert-danger");
+    }
+
+    alertResult.classList.remove("d-none");
+
+})
 
 
-if(found) {
-    alert("You're in!")
-} else {
-    alert("You're out!")
-}
+
+
