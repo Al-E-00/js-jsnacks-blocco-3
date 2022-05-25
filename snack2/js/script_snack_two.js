@@ -6,16 +6,19 @@
 */
 
 let userNumber = parseInt(prompt("Enter a number"));
-let arraysNumber = 0;
+let arraysNumber = [];
+let arrays = [];
 
-while (arraysNumber <= userNumber){
-
-    let arrays = [];
-    while (arrays[] < 10) {
-        let casualNumber = (Math.floor(Math.random * 100));
+while (arraysNumber.length < userNumber){
+    
+    
+    while (arrays.length < 10) {
+        let casualNumber = (Math.floor(Math.random() * 100));
         arrays.push(casualNumber);
     }
 
-    arraysNumber = arraysNumber + 1;
+    arraysNumber.push(arrays);
 }
 
+console.log(arrays);
+console.log(arraysNumber);
