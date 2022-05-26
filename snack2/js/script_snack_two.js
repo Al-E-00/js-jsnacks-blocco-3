@@ -5,20 +5,25 @@
 - Print the result
 */
 
-let userNumber = parseInt(prompt("Enter a number"));
+const userNumber = parseInt(prompt("Enter a number"));
 let arraysNumber = [];
-let arrays = [];
+
 
 while (arraysNumber.length < userNumber){
     
+    const newArray = [];
+
+    while (newArray.length < 10) {
+        
+        const casualNumber = Math.floor(Math.random() * 100) + 1;
     
-    while (arrays.length < 10) {
-        let casualNumber = (Math.floor(Math.random() * 100));
-        arrays.push(casualNumber);
+        if (!newArray.includes(casualNumber)) {
+            newArray.push(casualNumber);
+        }
     }
 
-    arraysNumber.push(arrays);
+    arraysNumber.push(newArray);
 }
 
-console.log(arrays);
+
 console.log(arraysNumber);
